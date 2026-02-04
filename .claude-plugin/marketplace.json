@@ -1,0 +1,23 @@
+{
+  "name": "koi",
+  "owner": {
+    "name": "anortham"
+  },
+  "metadata": {
+    "description": "Agent memory persistence for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "koi",
+      "source": "./",
+      "description": "Remember and recall across sessions - includes MCP server, hooks, and standup skill",
+      "version": "0.1.0",
+      "author": {
+        "name": "anortham"
+      },
+      "repository": "https://github.com/anortham/koi",
+      "license": "MIT",
+      "keywords": ["memory", "persistence", "recall", "remember", "standup"]
+    }
+  ]
+}
