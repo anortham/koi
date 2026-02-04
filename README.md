@@ -16,15 +16,11 @@ Requires [Bun](https://bun.sh).
 
 ### As a Plugin (Recommended)
 
-```bash
-# Clone the repository
-git clone https://github.com/anortham/koi.git
+In Claude Code:
 
-# Install dependencies
-cd koi && bun install
-
-# Install as a Claude Code plugin
-claude plugin install --plugin-dir /path/to/koi
+```
+/plugin marketplace add github:anortham/koi
+/plugin install koi@koi
 ```
 
 ### Manual Installation
