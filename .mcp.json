@@ -1,7 +1,0 @@
-{
-  "mcpServers": {
-    "koi": {
-      "command": "${CLAUDE_PLUGIN_ROOT}/src/index.ts"
-    }
-  }
-}

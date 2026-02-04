@@ -7,5 +7,10 @@
   },
   "repository": "https://github.com/anortham/koi",
   "license": "MIT",
-  "keywords": ["memory", "persistence", "recall", "remember", "standup"]
+  "keywords": ["memory", "persistence", "recall", "remember", "standup"],
+  "mcpServers": {
+    "koi": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/src/index.ts"
+    }
+  }
 }
