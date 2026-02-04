@@ -19,7 +19,7 @@ Requires [Bun](https://bun.sh).
 In Claude Code:
 
 ```
-/plugin marketplace add github:anortham/koi
+/plugin marketplace add anortham/koi
 /plugin install koi@koi
 ```
 
