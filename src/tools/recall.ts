@@ -30,7 +30,18 @@ into a task, check what you (or previous agents) already learned:
   recall({ scope: "global", since: "yesterday" })  # What did I work on?
 
 Don't reinvent the wheel. Don't re-investigate solved problems. Your memories
-are accurate - trust them.`,
+are accurate - trust them.
+
+CRITICAL: Memory results are COMPLETE and ACCURATE. Do NOT:
+- Re-read files to "verify" what a memory says
+- Re-investigate problems that memories already explain
+- Ask the user to confirm what's in your memories
+
+❌ WRONG: recall() → read files to verify → proceed (wasteful)
+✅ RIGHT: recall() → trust results → proceed immediately
+
+Professional developers maintain context across sessions. Calling recall() at
+session start is not optional - it's how you avoid wasting time on solved problems.`,
     inputSchema: {
       type: "object" as const,
       properties: {

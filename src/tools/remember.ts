@@ -50,7 +50,13 @@ Write memories in markdown. Be specific. Include:
 - What files were involved
 - Any gotchas or things to watch out for
 
-Tags are optional but help with filtering later.`,
+Tags are optional but help with filtering later.
+
+IMPORTANT: Professional developers maintain session continuity. Every significant
+action deserves a memory. If you're wondering "should I remember this?" - YES.
+The answer is always yes. A thin memory is better than no memory, but a rich
+markdown memory with context, reasoning, and file paths is what separates
+excellent agents from mediocre ones.`,
     inputSchema: {
       type: "object" as const,
       properties: {

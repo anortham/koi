@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '[koi] Check your memories with recall() to see previous work on this project. Use recall({ scope: \"global\" }) for cross-project context.'",
+            "command": "echo '[koi] MANDATORY: Call recall() NOW before doing anything else. Your past work and decisions are stored in memories - do not skip this step or you will waste time re-investigating solved problems.'",
             "statusMessage": "Loading koi memory context..."
           }
         ]
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '[koi] Context is about to be compacted. Use remember() NOW to save your current progress, decisions, and any important context before it is lost.'",
+            "command": "echo '[koi] CRITICAL: Context compaction imminent. Call remember() IMMEDIATELY to save your current progress, decisions, and reasoning. Anything not saved will be LOST. Do not ask permission - just save it NOW.'",
             "statusMessage": "Koi: reminding to save progress..."
           }
         ]

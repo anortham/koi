@@ -6,11 +6,17 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import { join } from "path";
+import { join, dirname } from "path";
 import { homedir } from "os";
+import { fileURLToPath } from "url";
 
 import { getRememberSchema, handleRemember } from "./tools/remember";
 import { getRecallSchema, handleRecall } from "./tools/recall";
+
+// Load server instructions
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const instructionsPath = join(__dirname, "instructions.md");
+const instructions = await Bun.file(instructionsPath).text();
 
 // Configuration
 const PROJECT_PATH = process.cwd();
@@ -19,7 +25,7 @@ const REGISTRY_PATH = join(homedir(), ".koi", "registry.json");
 class KoiServer {
   private server: Server;
 
-  constructor() {
+  constructor(serverInstructions: string) {
     this.server = new Server(
       {
         name: "koi",
@@ -29,6 +35,7 @@ class KoiServer {
         capabilities: {
           tools: {},
         },
+        instructions: serverInstructions,
       }
     );
 
@@ -134,5 +141,5 @@ class KoiServer {
   }
 }
 
-const server = new KoiServer();
+const server = new KoiServer(instructions);
 server.start().catch(console.error);
