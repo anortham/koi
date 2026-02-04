@@ -1,3 +1,15 @@
+## Plugin Releases
+
+When making changes to koi, bump the version in `.claude-plugin/plugin.json` before pushing. The plugin update system checks the version number, not the git commit SHA.
+
+```bash
+# Users update with:
+claude plugin update koi@koi
+```
+
+If you don't bump the version, users won't receive updates even after you push changes.
+
+## Bun
 
 Default to using Bun instead of Node.js.
 
