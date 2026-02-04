@@ -72,6 +72,21 @@ A central registry at `~/.koi/registry.json` enables cross-project queries via t
 { query: "database", tags: ["migration"], since: "1w", limit: 5 }
 ```
 
+## Skills
+
+Koi includes Claude Code skills for common workflows.
+
+### Standup
+
+Generate formatted standup reports from memories across all projects.
+
+```bash
+# Install the skill (one-time)
+cp -r /path/to/koi/skills/standup ~/.claude/skills/
+```
+
+Then ask Claude: "What did I work on yesterday?" or "Give me a weekly standup."
+
 ## License
 
 MIT
