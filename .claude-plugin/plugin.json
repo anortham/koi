@@ -1,0 +1,11 @@
+{
+  "name": "koi",
+  "version": "0.1.0",
+  "description": "Agent memory persistence - remember and recall across sessions",
+  "author": {
+    "name": "anortham"
+  },
+  "repository": "https://github.com/anortham/koi",
+  "license": "MIT",
+  "keywords": ["memory", "persistence", "recall", "remember", "standup"]
+}

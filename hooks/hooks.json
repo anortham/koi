@@ -1,0 +1,28 @@
+{
+  "description": "Koi memory hooks - auto-recall on start, save before compaction",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[koi] Check your memories with recall() to see previous work on this project. Use recall({ scope: \"global\" }) for cross-project context.'",
+            "statusMessage": "Loading koi memory context..."
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[koi] Context is about to be compacted. Use remember() NOW to save your current progress, decisions, and any important context before it is lost.'",
+            "statusMessage": "Koi: reminding to save progress..."
+          }
+        ]
+      }
+    ]
+  }
+}
